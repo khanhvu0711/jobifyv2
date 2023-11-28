@@ -26,11 +26,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  console.log(__dirname);
-  res.send('helloword;');
-});
-
 app.get('/api/v1/test', (req, res) => {
   res.json({ msg: 'test route' });
 });

@@ -30,10 +30,6 @@ app.use(_express["default"].urlencoded({
   extended: true
 }));
 app.use(_express["default"]["static"](_path["default"].resolve(__dirname, 'public')));
-app.get('/', function (req, res) {
-  console.log(__dirname);
-  res.send('helloword;');
-});
 app.get('/api/v1/test', function (req, res) {
   res.json({
     msg: 'test route'
